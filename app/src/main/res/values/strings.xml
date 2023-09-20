@@ -2,4 +2,20 @@
     <string name="app_name">NetflixClone</string>
     <string name="detalhes">O mutante Geralt de Rívia é um caçador de monstros que luta para encontrar seu lugar num mundo onde as pessoas muitas vezes são mais perversas que as criaturas selvagens.</string>
     <string name="txt_elenco">Estrelando:Henry Cavill,Anya Chalotra,Freya Allan Criação:Lauren Schmidt Hissrich</string>
+    <string name="email_or_password_error">E-mail ou Senha estão incorretos!</string>
+    <string name="login_success">Login efetuado com sucesso!</string>
+    <string name="network_error">Sem conexão com a internet!</string>
+    <string name="firebase_generic_error">Erro ao logar na aplicação!</string>
+    <string name="email_warning">Digite seu email</string>
+    <string name="password_warning">Digite sua senha</string>
+    <string name="info_email_senha">Informe seu email e senha para iniciar a assinatura</string>
+    <string name="info_criar_conta">Crie sua conta.</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="cadastrar">cadastrar</string>
+    <string name="save_success">Usuário cadastrado com sucesso!</string>
+    <string name="email_or_password_empty_error">Preencha todos os campos!</string>
+    <string name="password_weak_error">Digite uma senha com no mínimo 6 caracteres</string>
+    <string name="alread_user_error">Este usuário já foi cadastrado</string>
+    <string name="cadastro_error">Erro ao cadastrar usuário</string>
 </resources>

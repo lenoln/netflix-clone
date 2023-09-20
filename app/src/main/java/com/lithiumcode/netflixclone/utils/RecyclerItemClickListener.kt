@@ -1,4 +1,4 @@
-package com.lithiumcode.netflixclone.OnClick
+package com.lithiumcode.netflixclone.utils
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -11,11 +11,11 @@ fun RecyclerView.addOnItemClickListener(onClickListener: OnItemClickListener) {
     this.addOnChildAttachStateChangeListener(object :
         RecyclerView.OnChildAttachStateChangeListener {
         override fun onChildViewDetachedFromWindow(view: View) {
-            view?.setOnClickListener(null)
+            view.setOnClickListener(null)
         }
 
         override fun onChildViewAttachedToWindow(view: View) {
-            view?.setOnClickListener({
+            view.setOnClickListener({
                 val holder = getChildViewHolder(view)
                 onClickListener.onItemClicked(holder.adapterPosition, view)
             })

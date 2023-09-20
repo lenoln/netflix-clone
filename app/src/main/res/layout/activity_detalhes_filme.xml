@@ -1,106 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetalhesFilme"
-    android:background="@color/black_80">
+    tools:context=".view.movie.DetalhesFilme">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_detalhes"
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.lithiumcode.netflixclone.view.movie.DetalhesFilmeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="match_parent"
+        android:background="@color/black">
 
-    <ImageView
-        android:id="@+id/capa"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_detalhes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-    <ImageView
-        android:id="@+id/play_video"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/play"
-        app:layout_constraintStart_toStartOf="@id/capa"
-        app:layout_constraintEnd_toEndOf="@id/capa"
-        app:layout_constraintTop_toTopOf="@id/capa"
-        app:layout_constraintBottom_toBottomOf="@id/capa"/>
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_80"
+                tools:context=".view.movie.DetalhesFilme">
 
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="The Witcher"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/capa"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="10dp"/>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_detalhes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/descricao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detalhes"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/capa"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar_detalhes" />
 
-    <TextView
-        android:id="@+id/elenco"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_elenco"
-        android:textColor="@color/gray"
-        app:layout_constraintTop_toBottomOf="@id/descricao"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"/>
+                <ImageView
+                    android:id="@+id/play_video"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/play"
+                    app:layout_constraintBottom_toBottomOf="@id/capa"
+                    app:layout_constraintEnd_toEndOf="@id/capa"
+                    app:layout_constraintStart_toStartOf="@id/capa"
+                    app:layout_constraintTop_toTopOf="@id/capa" />
 
-    <TextView
-        android:id="@+id/txt_filmes_series"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mais Filmes e Séries"
-        android:textColor="@color/gray"
-        app:layout_constraintTop_toBottomOf="@id/elenco"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"/>
+                <TextView
+                    android:id="@+id/titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="The Witcher"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/capa" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/reciclerview_filmes_series"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/txt_filmes_series"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+                <TextView
+                    android:id="@+id/descricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/detalhes"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titulo" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+                <TextView
+                    android:id="@+id/elenco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/txt_elenco"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/descricao" />
+
+                <TextView
+                    android:id="@+id/txt_filmes_series"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Mais Filmes e Séries"
+                    android:textColor="@color/gray"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/elenco" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reciclerview_filmes_series"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_filmes_series" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
